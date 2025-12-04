@@ -1,6 +1,6 @@
 /*
  * style.css
- * Stylesheet para Landing Page 
+    * Estilos Controlei
  */
 
 /* ======================================= */
@@ -11,7 +11,7 @@ body {
     background-color: #ffffff;
     scroll-behavior: smooth;
     line-height: 1.6;
-    margin: 0; /* REMOVIDA A MARGEM PADRÃO */
+    margin: 0;
 }
 
 /* ======================================= */
@@ -23,28 +23,27 @@ body {
     top: 0;
     z-index: 1030;
     padding: 1rem 0;
-    /* ADICIONADO: Sombra para efeito 'flutuante' */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .navbar-brand {
     color: #ffffff !important;
-    font-weight: 700; /* Use 700 ou 800 para negrito forte */
-    font-size: 1.6rem; /* Levemente maior para mais destaque */
+    font-weight: 700;
+    font-size: 1.6rem;
     
-    /* NOVO: Transição suave para efeitos de hover */
+    /* Transição de hover */
     transition: all 0.3s ease; 
     
-    /* NOVO: Sombra sutil para dar profundidade e destaque */
+    /* Sombra sutil para dar profundidade e destaque */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); 
 }
 
-/* Efeito de Hover (Ao passar o mouse) */
+/* Efeito de Hover (mouse) */
 .navbar-brand:hover {
-    color: #0099ff !important; /* Mudar para a cor de destaque (Azul Claro) */
-    transform: scale(1.10); /* Aumenta ligeiramente o tamanho */
-    cursor: pointer; /* Indica que é clicável */
-    text-shadow: 1px 1px 5px rgba(0, 153, 255, 0.5); /* Sombra mais vibrante */
+    color: #0099ff !important;
+    transform: scale(1.10);
+    cursor: pointer;
+    text-shadow: 1px 1px 5px rgba(0, 153, 255, 0.5);
 }
 
 .nav-link {
@@ -55,19 +54,17 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-    color: #0099ff !important; /* Cor de destaque (Azul Claro) */
+    color: #0099ff !important;
 }
 
-/* ======================================= */
-/* 3. CABEÇALHO (HERO SECTION) */
-/* ======================================= */
+
 /* ======================================= */
 /* 3. CABEÇALHO (HERO SECTION) - Layout do Modelo */
 /* ======================================= */
 #header {
     min-height: 85vh;
-    background-color: #ffffff; /* Fundo branco ou muito claro */
-    color: #2c3e50; /* Texto principal em azul escuro */
+    background-color: #ffffff;
+    color: #2c3e50;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,20 +72,20 @@ body {
     padding: 60px 5% 40px;
     background-image: none;
     position: relative;
-    overflow: hidden; /* Garante que o fundo vazado não cause barra de rolagem */
+    overflow: hidden;
 }
 
-/* NOVO: Fundo Vazado em Azul Claro (como no modelo) */
+/* Fundo Vazado em Azul Claro*/
 #header::after {
     content: '';
     position: absolute;
-    bottom: -10%; /* Ajuste para onde o círculo deve começar */
+    bottom: -10%;
     left: 0;
     width: 250%; 
     height: 400%;
-    background-color: #e0f7fa; /* Azul bebê muito claro */
-    border-radius: 50% 50% 0 0; /* Forma de onda/círculo que sai da tela */
-    z-index: 0; /* Fica abaixo do conteúdo */
+    background-color: #e0f7fa;
+    border-radius: 50% 50% 0 0;
+    z-index: 0;
 }
 
 
@@ -99,7 +96,7 @@ body {
     max-width: 1200px;
     width: 100%;
     flex-wrap: wrap;
-    z-index: 1; /* Garante que o conteúdo fique acima do fundo vazado */
+    z-index: 1;
 }
 
 .hero-text {
@@ -368,6 +365,3 @@ body {
 .footer ul li a:hover {
     color: #0099ff;
 }
-
-
-
