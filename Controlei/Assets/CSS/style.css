@@ -1,0 +1,373 @@
+/*
+ * style.css
+ * Stylesheet para Landing Page 
+ */
+
+/* ======================================= */
+/* 1. ESTILOS DE BASE */
+/* ======================================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+    margin: 0; /* REMOVIDA A MARGEM PADRÃO */
+}
+
+/* ======================================= */
+/* 2. BARRA DE NAVEGAÇÃO */
+/* ======================================= */
+.navbar {
+    background-color: #2c3e50;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    padding: 1rem 0;
+    /* ADICIONADO: Sombra para efeito 'flutuante' */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+    font-weight: 700; /* Use 700 ou 800 para negrito forte */
+    font-size: 1.6rem; /* Levemente maior para mais destaque */
+    
+    /* NOVO: Transição suave para efeitos de hover */
+    transition: all 0.3s ease; 
+    
+    /* NOVO: Sombra sutil para dar profundidade e destaque */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); 
+}
+
+/* Efeito de Hover (Ao passar o mouse) */
+.navbar-brand:hover {
+    color: #0099ff !important; /* Mudar para a cor de destaque (Azul Claro) */
+    transform: scale(1.10); /* Aumenta ligeiramente o tamanho */
+    cursor: pointer; /* Indica que é clicável */
+    text-shadow: 1px 1px 5px rgba(0, 153, 255, 0.5); /* Sombra mais vibrante */
+}
+
+.nav-link {
+    color: #fff !important;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #0099ff !important; /* Cor de destaque (Azul Claro) */
+}
+
+/* ======================================= */
+/* 3. CABEÇALHO (HERO SECTION) */
+/* ======================================= */
+/* ======================================= */
+/* 3. CABEÇALHO (HERO SECTION) - Layout do Modelo */
+/* ======================================= */
+#header {
+    min-height: 85vh;
+    background-color: #ffffff; /* Fundo branco ou muito claro */
+    color: #2c3e50; /* Texto principal em azul escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 60px 5% 40px;
+    background-image: none;
+    position: relative;
+    overflow: hidden; /* Garante que o fundo vazado não cause barra de rolagem */
+}
+
+/* NOVO: Fundo Vazado em Azul Claro (como no modelo) */
+#header::after {
+    content: '';
+    position: absolute;
+    bottom: -10%; /* Ajuste para onde o círculo deve começar */
+    left: 0;
+    width: 250%; 
+    height: 400%;
+    background-color: #e0f7fa; /* Azul bebê muito claro */
+    border-radius: 50% 50% 0 0; /* Forma de onda/círculo que sai da tela */
+    z-index: 0; /* Fica abaixo do conteúdo */
+}
+
+
+/* --- Estrutura de Colunas --- */
+.hero-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+    z-index: 1; /* Garante que o conteúdo fique acima do fundo vazado */
+}
+
+.hero-text {
+    flex: 1; /* Ocupa metade da largura */
+    padding-right: 40px;
+    max-width: 50%;
+}
+
+.hero-image {
+    flex: 1; /* Ocupa a outra metade da largura */
+    text-align: center;
+    padding-left: 20px;
+}
+
+/* --- Estilos da Tipografia --- */
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #0099ff; /* Cor de destaque (Azul Claro) */
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.social-proof {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.disclaimer {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+
+/* --- Estilos do Formulário CTA --- */
+.cta-form {
+    display: flex;
+    max-width: 450px;
+    margin-bottom: 1rem;
+}
+
+.cta-form input[type="email"] {
+    padding: 0.75rem 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px 0 0 5px; /* Bordas arredondadas apenas à esquerda */
+    flex-grow: 1;
+    font-size: 1rem;
+    color: #2c3e50;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.cta-form input[type="email"]:focus {
+    border-color: #0099ff;
+}
+
+.btn-cta {
+    background-color: #0099ff; /* Azul Claro (CTA) */
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0 5px 5px 0; /* Bordas arredondadas apenas à direita */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: #007acc; /* Azul um pouco mais escuro */
+    box-shadow: 0 4px 8px rgba(0, 153, 255, 0.3);
+}
+
+/* --- Estilos da Imagem --- */
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.image-highlight {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* --- Responsividade (Ajustes para Mobile/Tablet) --- */
+@media (max-width: 992px) {
+    #header {
+        text-align: center;
+    }
+    .hero-content {
+        flex-direction: column;
+    }
+    .hero-text {
+        padding-right: 0;
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .main-title {
+        font-size: 2.5rem;
+    }
+    .subtitle {
+        font-size: 1.4rem;
+    }
+    .hero-image {
+        padding-left: 0;
+    }
+    .cta-form {
+        max-width: 90%;
+        margin: 0 auto 1rem auto;
+    }
+}
+
+/* ======================================= */
+/* 4. SEÇÕES DE CONTEÚDO (Geral) */
+/* ======================================= */
+.overview-section, .insights-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.insights-section {
+    background-color: #f4f6f8;
+}
+
+/* Títulos */
+.overview-section h2, .insights-section h2 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    /* NOVO: Sublinhado de destaque */
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #0099ff; 
+    display: inline-block;
+}
+
+/* Parágrafos de descrição */
+.overview-section p, .insights-section p {
+    font-size: 1.2rem;
+    color: #444; /* Cor mais escura para melhor legibilidade */
+    max-width: 800px;
+    margin: 0 auto 4rem auto; /* Aumenta o espaçamento abaixo */
+}
+
+/* ======================================= */
+/* 5. PRÉ-VISUALIZAÇÃO DO DASHBOARD (Cards) */
+/* ======================================= */
+.dashboard-preview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.dashboard-card {
+    background-color: #fff;
+    border-radius: 15px;
+    /* ALTERADO: Sombra mais nítida e menos dispersa (Dark Blue) */
+    box-shadow: 0 5px 15px rgba(44, 62, 80, 0.1); 
+    padding: 25px;
+    width: 290px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-height: 350px; 
+    text-align: left; /* Alinha o conteúdo interno à esquerda para parecer um dashboard */
+}
+
+.dashboard-card:hover {
+    /* ALTERADO: Hover mais dinâmico */
+    transform: translateY(-15px) scale(1.02); 
+    box-shadow: 0 15px 30px rgba(44, 62, 80, 0.15); 
+}
+
+.chart-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-left: 4px solid #0099ff; /* Destaque lateral */
+    padding-left: 10px;
+}
+
+/* ======================================= */
+/* 6. COLUNAS (Insights Section) */
+/* ======================================= */
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.column {
+    flex: 0 0 320px; 
+    min-height: 300px;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    /* ALTERADO: Sombra mais nítida e menos dispersa (Dark Blue) */
+    box-shadow: 0 5px 15px rgba(44, 62, 80, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    text-align: left;
+    border-top: 5px solid #0099ff; /* Destaque na borda superior */
+}
+
+.column:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(44, 62, 80, 0.15);
+}
+
+.columnhead {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.column p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* ======================================= */
+/* 7. RODAPÉ */
+/* ======================================= */
+.footer {
+    background-color: #2c3e50;
+    color: #f0f8fd;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer ul li a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #0099ff;
+}
+
+
+
