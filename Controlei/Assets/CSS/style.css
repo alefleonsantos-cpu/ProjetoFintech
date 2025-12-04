@@ -1,7 +1,5 @@
-/*
- * style.css
-    * Estilos Controlei
- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');  
 
 /* ======================================= */
 /* 1. ESTILOS DE BASE */
@@ -59,7 +57,7 @@ body {
 
 
 /* ======================================= */
-/* 3. CABEÇALHO (HERO SECTION) - Layout do Modelo */
+/* 3. CABEÇALHO */
 /* ======================================= */
 #header {
     min-height: 85vh;
@@ -100,13 +98,13 @@ body {
 }
 
 .hero-text {
-    flex: 1; /* Ocupa metade da largura */
+    flex: 1;
     padding-right: 40px;
     max-width: 50%;
 }
 
 .hero-image {
-    flex: 1; /* Ocupa a outra metade da largura */
+    flex: 1;
     text-align: center;
     padding-left: 20px;
 }
@@ -116,7 +114,7 @@ body {
     font-size: 3.5rem;
     font-weight: 800;
     line-height: 1.1;
-    color: #0099ff; /* Cor de destaque (Azul Claro) */
+    color: #0099ff;
     margin-bottom: 0.5rem;
 }
 
@@ -151,7 +149,7 @@ body {
 .cta-form input[type="email"] {
     padding: 0.75rem 1rem;
     border: 2px solid #ccc;
-    border-radius: 5px 0 0 5px; /* Bordas arredondadas apenas à esquerda */
+    border-radius: 5px 0 0 5px;
     flex-grow: 1;
     font-size: 1rem;
     color: #2c3e50;
@@ -164,19 +162,19 @@ body {
 }
 
 .btn-cta {
-    background-color: #0099ff; /* Azul Claro (CTA) */
+    background-color: #0099ff;
     color: #fff;
     border: none;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     font-weight: 600;
-    border-radius: 0 5px 5px 0; /* Bordas arredondadas apenas à direita */
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .btn-cta:hover {
-    background-color: #007acc; /* Azul um pouco mais escuro */
+    background-color: #007acc;
     box-shadow: 0 4px 8px rgba(0, 153, 255, 0.3);
 }
 
@@ -196,7 +194,7 @@ body {
     text-align: center;
 }
 
-/* --- Responsividade (Ajustes para Mobile/Tablet) --- */
+/* --- Responsividade --- */
 @media (max-width: 992px) {
     #header {
         text-align: center;
@@ -226,7 +224,7 @@ body {
 }
 
 /* ======================================= */
-/* 4. SEÇÕES DE CONTEÚDO (Geral) */
+/* 4. SEÇÕES DE CONTEÚDO */
 /* ======================================= */
 .overview-section, .insights-section {
     padding: 80px 20px;
@@ -244,7 +242,6 @@ body {
     color: #2c3e50;
     margin-bottom: 1rem;
     font-weight: 700;
-    /* NOVO: Sublinhado de destaque */
     padding-bottom: 0.5rem;
     border-bottom: 3px solid #0099ff; 
     display: inline-block;
@@ -253,13 +250,13 @@ body {
 /* Parágrafos de descrição */
 .overview-section p, .insights-section p {
     font-size: 1.2rem;
-    color: #444; /* Cor mais escura para melhor legibilidade */
+    color: #444;
     max-width: 800px;
-    margin: 0 auto 4rem auto; /* Aumenta o espaçamento abaixo */
+    margin: 0 auto 4rem auto;
 }
 
 /* ======================================= */
-/* 5. PRÉ-VISUALIZAÇÃO DO DASHBOARD (Cards) */
+/* 5. PRÉ-VISUALIZAÇÃO DO DASHBOARD */
 /* ======================================= */
 .dashboard-preview {
     display: flex;
@@ -271,17 +268,15 @@ body {
 .dashboard-card {
     background-color: #fff;
     border-radius: 15px;
-    /* ALTERADO: Sombra mais nítida e menos dispersa (Dark Blue) */
     box-shadow: 0 5px 15px rgba(44, 62, 80, 0.1); 
     padding: 25px;
     width: 290px;
     transition: transform 0.3s, box-shadow 0.3s;
     min-height: 350px; 
-    text-align: left; /* Alinha o conteúdo interno à esquerda para parecer um dashboard */
+    text-align: left;
 }
 
 .dashboard-card:hover {
-    /* ALTERADO: Hover mais dinâmico */
     transform: translateY(-15px) scale(1.02); 
     box-shadow: 0 15px 30px rgba(44, 62, 80, 0.15); 
 }
@@ -291,12 +286,12 @@ body {
     font-weight: 600;
     color: #2c3e50;
     margin-bottom: 15px;
-    border-left: 4px solid #0099ff; /* Destaque lateral */
+    border-left: 4px solid #0099ff;
     padding-left: 10px;
 }
 
 /* ======================================= */
-/* 6. COLUNAS (Insights Section) */
+/* 6. COLUNAS */
 /* ======================================= */
 .columns {
     display: flex;
@@ -311,14 +306,13 @@ body {
     background-color: #ffffff;
     padding: 2rem;
     border-radius: 15px;
-    /* ALTERADO: Sombra mais nítida e menos dispersa (Dark Blue) */
     box-shadow: 0 5px 15px rgba(44, 62, 80, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    justify-content: flex-start;
     text-align: left;
-    border-top: 5px solid #0099ff; /* Destaque na borda superior */
+    border-top: 5px solid #0099ff;
 }
 
 .column:hover {
